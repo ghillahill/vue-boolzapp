@@ -3,3 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background: -webkit-linear-gradient(90deg,#D2D4C9 85%,#358675 30%);
+}
+
+#root {
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    width: 1366px;
+    height: 768px;
+    margin: auto;
+    background-color: #EAEAEA;
+}
