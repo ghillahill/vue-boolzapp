@@ -33,7 +33,7 @@
                         <input type="text" placeholder="Cerca o inizia una nuova chat" value="">
                     </div>
                     <div class="user-contacts">
-                        <div v-for="item in contact" class="contact">
+                        <div v-for="(item, index) in contact" class="contact">
                             <img :src="item.avatar">
                             <div class="contact-name">
                                 <p>{{item.name}}</p>
@@ -46,8 +46,17 @@
                     <div class="current-user">
                         <img src="img/avatar_1.png">
                     </div>
-                    <div class="contact-messages">
-
+                    <div class="chat">
+                        <div class="chat-messages-l">
+                            <div class="message received">
+                                <p>Hello</p>
+                            </div>
+                        </div>
+                        <div class="chat-messages-r">
+                            <div class="message sent">
+                                <p>Ciao anche a te</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="message-bar">
                         <i class="far fa-smile"></i>
