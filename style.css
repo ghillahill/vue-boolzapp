@@ -14,8 +14,60 @@ body {
 }
 
 .container {
+    display: flex;
     width: 1366px;
     height: 768px;
     margin: auto;
     background-color: #EAEAEA;
+}
+
+#contact-board {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 500px;
+    background-color: red;
+}
+
+#message-board {
+    height: 100%;
+    width: calc(100% - 500px);
+    background-color: darkgrey;
+}
+
+/*---------------------------------------*/
+
+.user-panel {
+    display: flex;
+    height: 70px;
+    width: 100%;
+    padding: 15px;
+    background-color: #EAEAEA;
+}
+
+.user-panel img{
+    display: flex;
+    max-width: 10%;
+    align-self: center;
+}
+
+.user-notifi {
+    height: 75px;
+    width: 100%;
+    background-color: #8EDAFC;
+}
+
+.user-search {
+    height: 60px;
+    width: 100%;
+    background-color: #FBFBFB;
+}
+
+.user-contacts {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 205px);
+    width: 100%;
+    background-color: #fff;
+    overflow: overlay;
 }
