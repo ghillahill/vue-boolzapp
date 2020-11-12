@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <title>Boolzapp</title>
         <script src="https://kit.fontawesome.com/d573fb9cae.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -13,17 +15,30 @@
             <div class="container">
                 <section id="contact-board">
                     <div class="user-panel">
-                        <img src="img/avatar_1.png">
+                        <img src="img/avatar_4.png">
                     </div>
                     <div class="user-notifi">
-
+                        <div class="notifi-icon">
+                            <i class="fas fa-bell-slash"></i>
+                        </div>
+                        <div class="notifi-info">
+                            <p>Ricevi notifiche di nuovi messaggi</p>
+                            <a href="#">Attiva notifiche dekstop</a>
+                        </div>
                     </div>
                     <div class="user-search">
-
+                        <button type="button" class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" value="">
                     </div>
                     <div class="user-contacts">
-                        <div class="contact">
-
+                        <div v-for="item in contact" class="contact">
+                            <img :src="item.avatar">
+                            <div class="contact-name">
+                                <p>{{item.name}}</p>
+                                <small>{{item.stato}}</small>
+                            </div>
                         </div>
                     </div>
                 </section>
