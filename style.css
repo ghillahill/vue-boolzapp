@@ -64,16 +64,26 @@ a {
 
 .user-panel {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 70px;
     width: 100%;
     padding: 15px;
     background-color: #EAEAEA;
 }
 
-.user-panel img{
+.user-avatar img{
     display: flex;
     width: 56px;
     align-self: center;
+}
+
+.user-icon {
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    font-size: 20px;
+    color: #697378;
 }
 
 /*---------------------------------------*/
@@ -203,6 +213,7 @@ a {
     clear: both;
     max-width: 300px;
     padding: 10px 20px;
+    margin-bottom: 20px;
     border-radius: 5px;
 }
 
@@ -213,7 +224,7 @@ a {
 
 .sent {
     float: right;
-    background-color: green;
+    background-color: #D6F8BC;
 }
 
 .message-bar {
