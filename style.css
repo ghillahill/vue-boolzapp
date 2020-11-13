@@ -148,7 +148,7 @@ a {
     height: calc(100% - 200px);
     width: 100%;
     background-color: #fff;
-    overflow: overlay;
+    overflow-y: scroll;
 }
 
 .contact {
@@ -187,6 +187,8 @@ a {
 
 .current-user {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 70px;
     width: 100%;
     padding: 15px;
@@ -198,6 +200,14 @@ a {
     display: flex;
     width: 56px;
     align-self: center;
+}
+
+.contact-icon {
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    font-size: 20px;
+    color: #697378;
 }
 
 .chat {
