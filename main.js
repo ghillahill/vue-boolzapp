@@ -1,6 +1,7 @@
 var app = new Vue({
     el: '#root',
     data: {
+        contact_index: 0,
         contact: [
             {
                 name: 'Michele',
@@ -159,6 +160,9 @@ var app = new Vue({
         ]
     },
     methods: {
-        
+        changeContactInfo(index){
+            this.contact_index = index;
+            console.log(index);
+        }
     }
 });

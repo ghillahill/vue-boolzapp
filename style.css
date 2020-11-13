@@ -202,6 +202,11 @@ a {
     align-self: center;
 }
 
+.contact-avatar {
+    display: flex;
+    align-items: center;
+}
+
 .contact-icon {
     display: flex;
     justify-content: space-around;

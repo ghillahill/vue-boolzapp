@@ -40,7 +40,7 @@
                         <input type="text" placeholder="Cerca o inizia una nuova chat" value="">
                     </div>
                     <div class="user-contacts">
-                        <div v-for="(item, index) in contact" class="contact">
+                        <div @click="changeContactInfo(indice)" v-for="(item, indice) in contact" class="contact">
                             <img :src="item.avatar">
                             <div class="contact-name">
                                 <p>{{item.name}}</p>
@@ -51,8 +51,12 @@
                 </section>
                 <section id="message-board">
                     <div class="current-user">
-                        <div class="contact-avatar">
-                            <img src="img/avatar_4.png">
+                        <div v-for="(item, indice) in contact" v-if="indice == contact_index" class="contact-avatar">
+                            <img :src="contact[contact_index].avatar">
+                            <div class="contact-name">
+                                <p>{{contact[contact_index].name}}</p>
+                                <small>{{contact[contact_index].stato}}</small>
+                            </div>
                         </div>
                         <div class="contact-icon">
                             <i class="fas fa-search"></i>
