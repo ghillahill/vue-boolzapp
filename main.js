@@ -102,7 +102,7 @@ var app = new Vue({
     methods: {
         changeContactInfo(index){
             this.contact_index = index;
-            console.log(index);
+            //console.log(index);
         }
     }
 });
