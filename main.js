@@ -3,6 +3,7 @@ var app = new Vue({
     data: {
         contact_index: 0,
         new_message: '',
+        search: '',
         user:{
             avatar: 'img/avatar_4.png',
             name: 'Alby',
@@ -134,6 +135,13 @@ var app = new Vue({
                 //Pusho il nuovo oggetto nell'array corrispondente al contatto a cui ho scritto.
                 this.contact[this.contact_index].messages.push(nuova_risposta);
             },1500);
+        }
+    },
+    computed: {
+        filterContact: function() {
+            return this.contact.filter((item) => {
+                return item.name.match(this.search)
+            });
         }
     }
 });

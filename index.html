@@ -41,10 +41,10 @@
                         <button type="button" class="search-button">
                             <i class="fas fa-search"></i>
                         </button>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat" value="">
+                        <input type="text" placeholder="Cerca una nuova chat" v-model="search">
                     </div>
                     <div class="user-contacts">
-                        <div @click="changeContactInfo(indice)" v-for="(item, indice) in contact" class="contact">
+                        <div @click="changeContactInfo(indice)" v-for="(item, indice) in filterContact" class="contact">
                             <img :src="item.avatar">
                             <div class="contact-name">
                                 <p>{{item.name}}</p>
