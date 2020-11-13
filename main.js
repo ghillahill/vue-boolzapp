@@ -140,7 +140,7 @@ var app = new Vue({
     computed: {
         filterContact: function() {
             return this.contact.filter((item) => {
-                return item.name.match(this.search)
+                return item.name.toLowerCase().includes(this.search)
             });
         }
     }
