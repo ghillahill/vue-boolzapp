@@ -65,8 +65,7 @@
                         </div>
                     </div>
                     <div class="chat">
-                        <div class="message received">Hello</div>
-                        <div class="message sent">Ciao anche a te</div>
+                        <div v-for="(item, index) in contact[contact_index].messages" class="message received"></div>
                     </div>
                     <div class="message-bar">
                         <i class="far fa-smile"></i>
