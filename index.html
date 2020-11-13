@@ -51,7 +51,7 @@
                 </section>
                 <section id="message-board">
                     <div class="current-user">
-                        <div v-for="(item, indice) in contact" v-if="indice == contact_index" class="contact-avatar">
+                        <div class="contact-avatar">
                             <img :src="contact[contact_index].avatar">
                             <div class="contact-name">
                                 <p>{{contact[contact_index].name}}</p>
@@ -67,10 +67,6 @@
                     <div class="chat">
                         <div class="message received">Hello</div>
                         <div class="message sent">Ciao anche a te</div>
-                        <div class="message sent">Come stai?</div>
-                        <div class="message received">Tutto bene grazie, tu?</div>
-                        <div class="message sent">Tutto bene!</div>
-                        <div class="message received">Ottimo =D</div>
                     </div>
                     <div class="message-bar">
                         <i class="far fa-smile"></i>
