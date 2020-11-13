@@ -2,6 +2,7 @@ var app = new Vue({
     el: '#root',
     data: {
         contact_index: 0,
+        new_message: '',
         user:{
             avatar: 'img/avatar_4.png',
             name: 'Alby',
@@ -103,6 +104,36 @@ var app = new Vue({
         changeContactInfo(index){
             this.contact_index = index;
             //console.log(index);
+        },
+        addNewMessage() {
+
+            //Creo oggetto che verrà pushato in un determinato array messages di un contact
+            let nuovo_messaggio = {
+                date: '10/01/2020 15:52:00',
+                message: '',
+                status: 'sent'
+            };
+
+            //Associo a message this.new_message
+            nuovo_messaggio.message = this.new_message;
+
+            //Pusho il nuovo oggetto nell'array corrispondente al contatto cliccato.
+            this.contact[this.contact_index].messages.push(nuovo_messaggio);
+
+            //Ripulisco input
+            this.new_message = '';
+
+            setTimeout(() => {
+                // Creo oggetto per risposta automatica
+                var nuova_risposta = {
+                    date: '10/01/2020 15:52:01',
+                    message: 'ok',
+                    status: 'received'
+                };
+
+                //Pusho il nuovo oggetto nell'array corrispondente al contatto a cui ho scritto.
+                this.contact[this.contact_index].messages.push(nuova_risposta);
+            },1500);
         }
     }
 });
