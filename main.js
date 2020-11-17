@@ -4,6 +4,7 @@ var app = new Vue({
         contact_index: 0,
         new_message: '',
         search: '',
+        now_date: dayjs().format('hh:mm'),
         user:{
             avatar: 'img/avatar_4.png',
             name: 'Alby',
@@ -16,7 +17,7 @@ var app = new Vue({
                 stato: 'online',
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: '10/01/2020 15:31:55',
                     message: 'Hai portato a spasso il cane?',
                     status: 'sent'
                     },
@@ -126,7 +127,7 @@ var app = new Vue({
 
             setTimeout(() => {
                 // Creo oggetto per risposta automatica
-                var nuova_risposta = {
+                let nuova_risposta = {
                     date: '10/01/2020 15:52:01',
                     message: 'ok',
                     status: 'received'
@@ -140,7 +141,7 @@ var app = new Vue({
     computed: {
         filterContact: function() {
             return this.contact.filter((item) => {
-                return item.name.toLowerCase().includes(this.search)
+                return item.name.toLowerCase().includes(this.search) || item.name.includes(this.search)
             });
         }
     }

@@ -7,6 +7,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+        <script>dayjs().format()</script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -69,7 +71,13 @@
                         </div>
                     </div>
                     <div class="chat">
-                        <div v-for="(item, index) in contact[contact_index].messages" class="message" :class="item.status">{{item.message}}</div>
+                        <div
+                        v-for="(item, index) in contact[contact_index].messages"
+                        class="message"
+                        :class="item.status">
+                            <span>{{item.message}}</span>
+                            <p>{{now_date}}</p>
+                        </div>
                     </div>
                     <div class="message-bar">
                         <i class="far fa-smile"></i>
